@@ -34,7 +34,7 @@ PORT=
 
 # Rotas:
 
-- **Base Url:** [http://localhost:3000]
+- **Base Url:** http://localhost:3000
 
 
 ## Clients:
@@ -58,14 +58,14 @@ PORT=
 **O que deve ser enviado:**
 
 ```json
+
 {
-    {
-        "name": "client",
-        "email": "client@email.com",
-        "password": "1234",
-        "telephone": "(61)9999-9999"
-    }
+    "name": "client",
+    "email": "client@email.com",
+    "password": "1234",
+    "telephone": "(61)9999-9999"
 }
+
 ```
 
 **O que será retornado em caso de sucesso:**
@@ -233,12 +233,24 @@ PORT=
 
 **Sobre a rota:** Rota para deletar um cliente.
 
-**O que deve ser enviado:** No Body
+**O que deve ser enviado:**
 
-**O que será retornado em caso de sucesso:** No body returned for response
+```
+    No body
+
+```
+
+**O que será retornado em caso de sucesso:**
+
+```
+    No body returned for response
+
+```
 
 
 ---
+
+```
 
 ## Contacts:
 
@@ -428,12 +440,17 @@ PORT=
 
 **Sobre a rota:** Rota para deleção de um contato.
 
-**O que deve ser enviado:** No Body
-
-**O que será retornado em caso de sucesso:** No body returned for response
+**O que deve ser enviado:**
 
 ```
----
+    No body
+
+```
+
+**O que será retornado em caso de sucesso:**
+
+```
+    No body returned for response
 
 ```
 ##  Retornos Gerais de Erros:
