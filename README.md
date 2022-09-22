@@ -477,9 +477,10 @@ PORT=
 {
     "message": "Client need a name, email, password and telephone to be created."
 }
-
+```
 ou
 
+```json
 {
 	"message": "Contact need a name, email, telephone and clientId to be created."
 }

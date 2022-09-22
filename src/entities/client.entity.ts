@@ -25,6 +25,6 @@ export class Client {
     @CreateDateColumn()
     createdAt: Date
 
-    @OneToMany(type => Contact, contacts => contacts.client)
+    @OneToMany(type => Contact, contacts => contacts.client, {eager:true})
     contacts?: Contact[]
 }

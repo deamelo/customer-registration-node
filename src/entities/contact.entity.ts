@@ -17,7 +17,7 @@ export class Contact {
     @Column({length:13})
     telephone: string
 
-    @ManyToOne(type => Client, client => client.contacts, {eager:true})
+    @ManyToOne(type => Client, client => client.contacts)
     client: Client
 
 }

@@ -11,7 +11,7 @@ const createClientService = async ({ name, email, password, telephone }: IClient
     const emailAlreadyExists = await clientRepository.findOneBy({email})
 
     if (emailAlreadyExists) {
-        throw new AppError(409, "Email already exist");
+        throw new AppError(400, "Email already exist");
     }
 
     if (!name || !email || !password || !telephone) {
