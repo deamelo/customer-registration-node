@@ -4,8 +4,8 @@
 
 ## 1. Features Gerais
 
-  - Cadastro e login de cliente;
-  - Cadastro de contatos;
+  - Cadastro e login de cliente
+  - Cadastro de contatos
 
 ## 2. Tecnologias
 
