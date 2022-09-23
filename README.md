@@ -13,28 +13,23 @@
 - _NodeJs_
 - _Sqlite3_
 - _PostgreSQL_
+- _Docker_
+- _Heroku_
 
 ## 3. Instalação
 
 - Crie um arquivo na raiz do projeto chamado `.env` e faça as configurações das variáveis de ambiente conforme o que está disposto no `.env.example` do projeto:
 
 ```
-POSTGRES_USER=
-POSTGRES_PWD=
-POSTGRES_DB=
-POSTGRES_HOST=
 SECRET_KEY=
-PORT=
+
+DATABASE_URL="postgres://user:pass@localhost:5432/db"
+
 ```
-
-- Para rodar o projeto utilize o comando abaixo:
-
-`yarn dev`
-
 
 # Rotas:
 
-- **Base Url:** http://localhost:3000
+- **Base Url:** https://customer-registration-node-ts.herokuapp.com
 
 
 ## Clients:

@@ -13,7 +13,4 @@ appRoutes(app)
 
 app.use(handleAppErrorMiddeware)
 
-
-// const port = process.env.PORT || 3001
-
 export default app
