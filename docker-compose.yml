@@ -1,0 +1,42 @@
+version: '3.9'
+
+services:
+  api:
+    container_name: api
+    build: .
+    ports:
+      - 3000:3000
+    environment:
+      - POSTGRES_USER=dea
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=cadastro
+      - POSTGRES_HOST=db
+      - SECRET_KEY=b85e5a9be0f7f3948aa75acb2ec91c64538df821
+      - PORT=3000
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - .:/app
+  
+  db:
+    container_name: db
+    image: postgres:14
+    ports:
+      - 5431:5432
+    environment:
+      - POSTGRES_USER=dea
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=cadastro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dea -d cadastro"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    volumes:
+      - postgres_cadastro:/var/lib/postgresql/data
+
+volumes:
+  postgres_cadastro:
+    driver: local
