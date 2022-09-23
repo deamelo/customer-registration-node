@@ -13,6 +13,4 @@ appRoutes(app)
 
 app.use(handleAppErrorMiddeware)
 
-// process.env.PORT
-
 export default app
